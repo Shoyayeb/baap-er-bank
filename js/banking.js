@@ -75,3 +75,6 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
         console.log('You can not withdraw more than what you have in your account');
     }
 });
+document.getElementById("close").addEventListener("click", function () {
+    document.getElementById("myModal").style.display = "none";
+});
