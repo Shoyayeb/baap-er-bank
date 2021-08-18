@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baap er Bank</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-16">Welcome to my <span
+                class="font-semibold	text-purple-600">Baap-Er-Bank</span>!!!</h1>
+    </header>
+    <main>
+        <section class="bg-green-100 w-3/4 p-8 mx-auto mt-8">
+            <h3 class="text-2xl mb-4">Please Login</h3>
+            <div>
+                <input autocomplete="email" class="border rounded shadow-lg block p-1 border-gray-300 w-3/4 mb-4"
+                    type="email" name="email" id="email" placeholder="Email">
+                <input class="border rounded p-1 border-gray-300 shadow-lg w-3/4 mb-4" type="password"
+                    autocomplete="current-password" name="password" id="password" placeholder="Password">
+                    <i class="far fa-eye-slash" style="cursor: pointer;" id="togglePassword"></i>
+                <button id="login-submit" class="bg-yellow-600 px-4 rounded py-2 block text-white font-medium">Submit</button>
+            </div>
+                
+        </section>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

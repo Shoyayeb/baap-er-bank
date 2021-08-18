@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baap er Bank</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-8 ">
+            Lets get some <span class="font-semibold text-purple-600"><strong>Mooooney</strong>!!!</span></h1>
+    </header>
+    <main class="text-white w-3/4 mx-auto bg-gray-100 rounded-2xl">
+        <!-- Balance and Transaction -->
+        <section class="mt-12">
+            <div class="md:grid md:grid-cols-3 md:gap-4">
+                <div class="bg-gradient-to-r from-pink-600 to-pink-400 p-8 md:my-0 my-8 md:rounded-tl-2xl shadow-xl">
+                    <h3 class="text-2xl">Deposit</h3>
+                    <h4 class="text-4xl">$<span id="deposit-total">00</span> </h4>
+                </div>
+                <div class="bg-gradient-to-r from-green-600 to-green-400 p-8 md:my-0 my-8 md:rounded shadow-xl">
+                    <h3 class="text-2xl">Withdraw</h3>
+                    <h4 class="text-4xl">$<span id="withdraw-total">00</span></h4>
+                </div>
+                <div class="bg-gradient-to-r from-yellow-300 to-red-400 p-8 md:my-0 my-8 md:rounded-tr-2xl shadow-xl">
+                    <h3 class="text-2xl">Balance</h3>
+                    <h4 class="text-4xl">$<span id="balance-total">1240</span></h4>
+                </div>
+
+            </div>
+        </section>
+        <!-- Deposit and Withdraw -->
+        <section class="mt-8">
+            <div class="md:grid md:grid-cols-2 md:gap-4">
+                <div class="bg-gradient-to-r from-red-600 to-red-400 shadow-2xl md:my-0 my-8 p-8 md:rounded-bl-2xl">
+                    <h3 class="text-3xl">Please Deposit</h3>
+                    <form onsubmit="return false;">
+                        <input id="deposit-input" autocomplete="transaction-amount"
+                            class="border rounded block p-1 border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent text-black w-3/4 mb-4"
+                            type="number" placeholder="$ amount you want to deposit">
+                        <button id="deposit-button"
+                            class="hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-100 focus:ring-opacity-50 bg-green-600 p-1 rounded px-3 border flex my-4 font-medium">Deposit</button>
+                    </form>
+                </div>
+                <div class="bg-gradient-to-r from-green-400 to-green-600 shadow-2xl p-8 md:rounded-br-lg">
+                    <h3 class="text-3xl">Please Withdraw</h3>
+                    <form onsubmit="return false;">
+                        <input id="withdraw-input" autocomplete="transaction-amount"
+                            class="focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent border rounded block p-1 border-gray-300 text-black w-3/4 mb-4"
+                            type="number" name="withDrawInput" placeholder="$ amount you want to withdraw">
+                        <button id="withdraw-button" id="withDrawBtn"
+                            class="hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50 bg-red-600 p-1 rounded px-3 border flex my-4 font-medium">Withdraw</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="myModal" class="modal hidden">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span id="close" class="close">&times;</span>
+                    <h2 class="text-2xl text-center font-bolder">You've got 1240$ from Steve Jobs</h2>
+                    <p class="text-center text-red-500 text-sm">Use It Carefully</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="./js/banking.js"></script>
+</body>
+
+</html>
